@@ -1,119 +1,614 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Open Sans', sans-serif;
+    }
 
-.logo{
-    height: 100px;
-    border-bottom: 1px solid teal;
-}
-.nav-left h5{
-color: white;
-font-size: 20px;
-font-family: Arial, Helvetica, sans-serif;
-font-weight: normal;
-margin-right: 20px;
-}
-.nav{
-    display: flex;
+    .logo img {
+        width: 250px;
+        margin-left: 45%; 
+    }
+    @media screen and (max-width: 600px){
+    .logo img{
+        width: 200px;
+    }
+    }
+
+    /*-------section header------------- */
+
+    .nav h4{
+        display: block;
+        height: 10px;
+        background-color: #01689b;;
+        color: white;
+        padding-left: 20px;
+        padding-top: 15px;
+    }
+    ul#nav-list {
+        margin: 0 auto;
+        padding: 10px 0;
+        background-color: #01689b;
+        list-style-type: none;
+        font-size: 13px;
+    }
+
+    ul#nav-list li {
+        display: inline;
+        margin: 0;
+    
+    }
+    ul#nav-list li:nth-child(1){
+        margin-left: 13%;
+    }
+
+    ul#nav-list li a {
+        display: inline-block;
+        margin: 0 15px ; 
+        padding: 4px 10px;
+        font-size: 17px;
+        text-decoration: none;
+        color: white;
+    }
+    ul#nav-list li a:hover {
+        text-decoration: underline;
+    }
+    .nav-toggle {
+        display: none;
+    }
+
+    @media screen and (max-width: 600px) {
+
+        .nav h4{
+            text-align: right;
+            padding-right: 20px;
+            padding-top: 30px;
+        }
+
+
+
+        ul#nav-list li:nth-child(1){
+            margin-left: 0px;
+        }
+    .nav-items{
+        width: 100%;
+        background-color: #01689b;
+        padding-bottom: 20px;
+        padding-left: 7px;
+    
+    }
+    ul#nav-list {
+        width: 100%;
+        margin: 0;
+         padding: 0;
+        display: none;
+        background-color: #01689b;
+        
+
+    } 
+    ul#nav-list li {
+        display: block;
+        border-bottom:  1px white solid;
+        width: 100%;
+        padding-bottom: 10px;
+    
+    }
+    ul#nav-list li.hide {
+        display: none;
+    }
+
+    .nav-toggle-label:before {
+        color: white;
+        content: '☰';
+        font-size: 30px;
+    }
+    #nav-list li a {    
+        color: white;
+    }
+    .nav-toggle-label:hover {
+        cursor: pointer;
+    }
+    .nav-toggle:checked+ul#nav-list {
+        display: table;
+        margin-left: 0;
+    }
+    }
+    /*........section...........*/
+
+        .se{
+        background-image: url(https://www.up-00.com/i/00164/jzodcn8eq47l.jpg);
+        height: 350px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;   
+        }
+        .bekeken{
+            display: flex;
+            height: 300px;
+            padding: 25px 15px 50px 15px;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        
+        }
+        .info{
+            background-color: rgb(255, 255, 255);
+            overflow: hidden;
+            padding: 20px;
+            line-height: 2em;    
+        }
+        .info h3{
+            font-size: 22px;
+            font-weight: normal;
+            margin-bottom: 10px;   
+        }
+        .info ul li a{
+            text-decoration: none;
+            color: #01689b;
+        
+        }
+        ul#update  li{
+        list-style-type: none;
+        font-weight: bold;
+        
+        }
+        ul#update  li a:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        
+        #update  li i{
+            padding-right: 6px;
+        }
+        
+        #search a::after{
+            content: '';
+            font-family: "FontAwesome";
+            font-size: 16px;
+            color: rgb(255, 255, 255);
+            background-color: #000000;
+            padding: 13px 15px 18px;
+            position: absolute;
+        }
+        #search {
+            height: 45px;
+            width: 50%;
+        }
+        
+        #search input{
+            height: 47px;
+            width: 300px; 
+        }
+        .copy{
+            display: block;
+            position: absolute;
+            padding-left: 80%;
+            margin-top: 280px;
+            color: rgb(255, 255, 255);
+            }
+        @media screen and (max-width: 600px){
+            .bekeken{
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+            .info{
+                width: 100%;
+                line-height: 1.7em;
+            }
+            .info h3{
+                margin-bottom: 0px;
+            }
+            #search {
+                height: 35px;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            #search input{
+                height: 35px;
+                width: 90%; 
+            }
+            #search a::after{
+                font-size: 15px;
+                padding: 11px 13px 11px; 
+            }
+            .copy{
+            padding-right: 9px;
+            margin-top: 25%;
+            padding-left: 70%;
+            }
+            .copy p{
+                font-size: 12px;
+            }
+            
+        }
+        /*........section cards............*/
+        .cards{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 50px 50px 50px 50px;
+            background-color: #F3F3F3;
+        }
+        .card{
+            width: 23%;
+            line-height: 1.5em;
+            margin-bottom: 30px;
+            margin-left: 20px;
+        } 
+        .card a h3{
+        width: 90%;
+        color: #01689b;
+        font-size: 23px;
+        font-weight: normal;
+        text-align: left;
+        }
+        .card a{
+            text-decoration: none;
+        }
+        .card a h3:hover{
+        text-decoration: underline;
+        cursor: pointer;
+        }
+        .card p{
+            width: 90%;
+            padding-top: 10px;
+            font-size: 18px;
+        }
+        @media screen and (max-width: 600px){
+            .cards{
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .card{
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            .card a h3{
+            font-size: 18px;
+            width: 100%;
+            font-weight: bold;
+            }
+            .card p{
+                font-size: 16px;
+            }
+        }
+        /*.....section group cards.......*/
+        .group-cards{
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 13px;
+            padding-bottom: 75px;
+        }
+        .item-card{
+            width: 33%;
+        }
+        .group-cards #title{
+            display: block;
+            margin-bottom: 30px;
+            padding-top: 10px;
+            margin-top: 50px;
+            border-top: grey 1px solid;
+        }
+        .go-card{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+        .item-card h2 {
+            padding-top: 10px;
+            padding-bottom: 15px;
+            font-size: 25px;
+            font-weight: normal;
+        }
+        .item-card a {
+            text-decoration: none;
+        }
+        .item-card a h2:hover{
+            text-decoration: underline;
+            color: #01496c;
+        }
+        #card-title{
+            color: #01689b;
+        }
+        #card-title::before{
+        content: '';
+        font-family: "FontAwesome";
+        font-size: 17px;
+        background-color: white;
+        
+        }
+        #card-title:hover{
+            color: #01496c;
+        }
+        a .item-card{
+        position: relative; 
+        }
+        
+        .item-card img{
+            width: 95%;
+        }
+        .item-card .niaid{
+        position: absolute;
+        color: white;
+        padding-top: 18%;
+        
+        }
+        .niaid span{
+            padding: 10px;
+        }
+        .card-paragraph p{
+            width: 90%;
+            color: black;
+            line-height: 1.5em;
+        }
+
+        @media screen and (max-width: 600px){
+
+        .item-card{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .go-card{
+            flex-direction: column;
+        }
+        .niaid{
+            margin-top: 180px;
+        }
+    }
+    /*......section news..........*/
+    .news{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 13px;
+        padding-bottom: 75px;
+    }
+    .news-item{
+    width: 30%;
+    }
+    #news-title{
+        display: block;
+        padding-top: 10px;
+        margin-top: 50px;
+        border-top: grey 1px solid;
+        margin: 10px 15px 20px 17px;
+    }
+    .news-cards{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     justify-content: space-around;
-    height: 70px;
-    padding: 21px 0px 15px 5px;
-    
-    background-color: rgb(31, 104, 155);
-}
-.nav-menu li{
-    display: inline-block ;
-    text-decoration: none;
-   
-}
-.nav-menu li a{
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    padding-left: 35px;
-    text-decoration: none;
-    
-}
-.nav-menu li a:hover{
-    border-bottom: 1px solid white;
-    cursor: pointer;
-    
+    }
+    .news-item a {
+        text-decoration: none;
+    }
+    .news-item h2{
+        color: #01689b;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 22px;
+        font-weight: normal;
+    }
+    .news-item h2:hover{
+        text-decoration: underline;
+        color: #01496c;
+    }
+    .news-item span{
+        font-weight: bold;
+        color: black;
+        padding-right: 5px;
+        padding-left: 5px;
 
-}
-.se{
-    background-image: url(https://j.top4top.io/p_1529k396t1.png);
-    height: 300px;
-    
-    width: 100%;
-    
-   
-}
-.bekeken{
-    display: flex;
-    height: 300px;
-    padding: 25px 15px 50px 15px;
-    justify-content: space-around;
-    background-color: thistle;
-   
-}
-.info{
-    background-color: rgb(255, 255, 255);
-    overflow: hidden;
-    padding: 20px;
-    line-height: 2em;
-    
-}
-.info h3{
-    font-size: 22px;
-    font-family: sans-serif;
-    font-weight: normal;
-    margin-bottom: 10px;
-    
-}
-.info ul li a{
-    text-decoration: none;
-    color: #01689b;
-}
-#update{
-  
-}
-ul#update  li{
-list-style-type: none;
-font-weight: bold;
-font-family: sans-serif;
+    }
+    .news-item span#date{
+        border-right: black 2px solid;
+    }
+    .new-paragraph p{
+        color: black;
+        line-height: 1.5em;
+        padding-top: 10px;
+        
+    }
+    @media screen and (max-width: 600px){
 
-}
-#update  li i{
-    padding-right: 6px;
-}
-.icon-search{
+        .news{
+            padding-bottom: 30px;
+        }
+        .news-cards{
+            flex-direction: column;
+        }
+        .news-item{
+            width: 100%;
+        }
+        .news-item h2{
+        font-size: 20px;
+        }
+        .new-paragraph p{
+            font-size: 15px;
+        }
+    }
+    /*....section meer news......*/
+    .meer-title h3{
+        margin-bottom: 50px;
+        color: #01689b;
+        font-family: sans-serif;
+        font-weight: normal;
+    }
+    .meer-title a{
+        text-decoration: none;
+    }
+    .meer-title h3::before{
+        content: '';
+        font-family: "FontAwesome";
+        padding-right: 10px;
+        padding-left: 10px; 
+    }
+    .meer-title h3:hover{
+        color: #01496c;
+        text-decoration: underline;
+    }
+    .meer{
+        display: flex;
+        flex-direction: row;
+        width: 100%; 
+    }
+    .meer-card{
+        display: inline-block;
+        padding: 20px;
+        width: 35%;
+        height: 220px;
+        border: 4px solid #CBD2E3;
+        margin-bottom: 100px;
+        margin-right: 16px;
+        margin-left: 15px;
+    }
+    .meer-card a{
+        text-decoration: none;
+    }
+    .meer-card span{
+        text-align: center;
+        color: #1b5e84;
+        font-size: 25px;
+    }
+    .meer-card p{
+        text-align: center;
+        padding-bottom: 1%;
+        padding-top: 3%;
+        color: black;
+        font-size: 30px;
+    }
+    .meer-card span h3{
+        color: #a90061;
+        padding-top: 3%;
+        font-size: 35px;
+    }
+    @media screen and (max-width: 600px){
+
+        .meer{
+            flex-direction: column;
+        }
+        .meer-card{
+            width: 90%;
+            margin-bottom: 50px;
+            flex-wrap: nowrap;
+            overflow: hidden;
+        }
+    }
+    /*......section service.........*/
+    .serv{
+        width: 100%;
+        height: 350px;
+        background-color: #1F689B;
+    }
+    .service{
+        display: flex;
+        flex-direction: row;
+        padding-top: 50px; 
+    }
+    .service a{
+    text-decoration: none;
+    list-style-type: none;
+    }
+    .service a:hover{
+    text-decoration: underline;
+    }
+    .service-title{
     display: inline-block;
-    background-color: black;
-    color: rgb(255, 255, 255);
-    height: 45px;
+    font-size: 18px;
+    color: white;
+    width: 50%;
+    padding-left: 2%;
+    }
+    .sv{
+    width: 50%;
+    display: flex;
+    color: white;
+    }
+    .service-list{ 
+        text-align: left;
+        width: 40%;
+    }
+    .service-list h3{
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: normal;
+    }
+    .service-list ul a{
+        line-height: 1.7em;
+        color: white;
+        font-size: 15px;
+    }
+    @media screen and (max-width: 600px){
+        .serv{
+            height: 400px;
+        }
+        
+        .service{
+            flex-direction: column;
+        }
+        .service-title{ 
+            width: 100%;
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+        .service-list h3{
+            font-size: 17px;
+            font-weight: bold;
+        }
+        .sv{
+            width: 100%;
+        }
+        .service-list{
+            margin-left: 1px;
+        }
+        .service-list ul a{
+            line-height: 1.4em;
+        }
+        .resposerv{
+            margin-left: 20%;
+        }
+        .respo{
+            margin-left: 5%;
+        }
+    }
+    /*......section footer.........*/
+    .language{
+        display: flex;
+        flex-direction: row;
+        height: 120px;
+        padding-top: 37px;
+        margin-left: 20%;
+        }
+        .language ul a{
+            display: inline-block;
+            text-decoration: none;
+            list-style-type: none;
+            border: #007bc7 1px solid;
+            padding: 10px;
+            margin-left: 10px;
+            color: #007bc7;
+        }
+        .language h3{
+            margin-right: 15px;
+            margin-top: 9px; 
+            font-size: 17px;
+        }
+        @media screen and (max-width: 600px){
 
-    
-     
-}
-#search a::after{
-    content: '';
-    font-family: "FontAwesome";
-    font-size: 17px;
-    color: rgb(255, 255, 255);
-    background-color: black;
-    padding: 10px 13px 14px;
-    
-}
-#search {
-    height: 45px;
-}
-
-#search input{
-    height: 47px;
-    width: 300px;
-   
-}
- 
-
+            .language{
+                flex-wrap: wrap;
+                padding: 0;
+                height: 170px;
+                margin-top: 50px;
+            }
+            .language ul a{
+            display: inline-block;
+            }
+            .language ul a:nth-child(n+3){
+                margin-top: 5px;
+                }
+                .language h3{
+                    margin: 0px;
+                }
+        }
