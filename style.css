@@ -38,10 +38,6 @@
         margin: 0;
     
     }
-    ul#nav-list li:nth-child(1){
-        margin-left: 13%;
-    }
-
     ul#nav-list li a {
         display: inline-block;
         margin: 0 15px ; 
@@ -52,6 +48,9 @@
     }
     ul#nav-list li a:hover {
         text-decoration: underline;
+    }
+    ul#nav-list li:nth-child(1){
+        margin-left: 13%;
     }
     .nav-toggle {
         display: none;
@@ -65,8 +64,6 @@
             padding-top: 30px;
         }
 
-
-
         ul#nav-list li:nth-child(1){
             margin-left: 0px;
         }
@@ -77,15 +74,20 @@
         padding-left: 7px;
     
     }
+    ul#nav-list li a {
+        font-size: 13px;
+    }
     ul#nav-list {
         width: 100%;
         margin: 0;
          padding: 0;
         display: none;
         background-color: #01689b;
-        
-
     } 
+    .nav-toggle:checked+ul#nav-list {
+        display: table;
+        margin-left: 0;
+    }
     ul#nav-list li {
         display: block;
         border-bottom:  1px white solid;
@@ -108,22 +110,22 @@
     .nav-toggle-label:hover {
         cursor: pointer;
     }
-    .nav-toggle:checked+ul#nav-list {
-        display: table;
-        margin-left: 0;
-    }
+    
     }
     /*........section...........*/
 
         .se{
-        background-image: url(https://www.up-00.com/i/00164/jzodcn8eq47l.jpg);
+        /*background-image: url(https://www.up-00.com/i/00164/jzodcn8eq47l.jpg);*/
+        background-image: url(https://img.techpowerup.org/200314/MDYxZTJjYjBmYjQw.jpg);
         height: 350px;
+        background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;   
         }
         .bekeken{
             display: flex;
+            flex-direction: row-reverse;
             height: 300px;
             padding: 25px 15px 50px 15px;
             justify-content: space-around;
@@ -181,7 +183,7 @@
         .copy{
             display: block;
             position: absolute;
-            padding-left: 80%;
+            padding-right: 80%;
             margin-top: 280px;
             color: rgb(255, 255, 255);
             }
@@ -212,14 +214,15 @@
             }
             .copy{
             padding-right: 9px;
-            margin-top: 25%;
-            padding-left: 70%;
+            margin-top: 150px;
+            padding-right: 70%;
             }
             .copy p{
                 font-size: 12px;
             }
             
         }
+       
         /*........section cards............*/
         .cards{
             display: flex;
@@ -249,7 +252,7 @@
         cursor: pointer;
         }
         .card p{
-            width: 90%;
+            width: 100%;
             padding-top: 10px;
             font-size: 18px;
         }
@@ -298,7 +301,7 @@
         .item-card h2 {
             padding-top: 10px;
             padding-bottom: 15px;
-            font-size: 25px;
+            font-size: 20px;
             font-weight: normal;
         }
         .item-card a {
@@ -314,8 +317,9 @@
         #card-title::before{
         content: '';
         font-family: "FontAwesome";
-        font-size: 17px;
+        font-size: px;
         background-color: white;
+        padding: 5px;
         
         }
         #card-title:hover{
@@ -327,15 +331,17 @@
         
         .item-card img{
             width: 95%;
+
         }
         .item-card .niaid{
         position: absolute;
         color: white;
-        padding-top: 18%;
+        padding-top: 0%;
+        font-size: 10px;
         
         }
         .niaid span{
-            padding: 10px;
+            padding: 7px;
         }
         .card-paragraph p{
             width: 90%;
@@ -352,9 +358,6 @@
         .go-card{
             flex-direction: column;
         }
-        .niaid{
-            margin-top: 180px;
-        }
     }
     /*......section news..........*/
     .news{
@@ -370,7 +373,6 @@
     #news-title{
         display: block;
         padding-top: 10px;
-        margin-top: 50px;
         border-top: grey 1px solid;
         margin: 10px 15px 20px 17px;
     }
@@ -387,7 +389,7 @@
         color: #01689b;
         padding-top: 10px;
         padding-bottom: 10px;
-        font-size: 22px;
+        font-size: 20px;
         font-weight: normal;
     }
     .news-item h2:hover{
@@ -515,9 +517,9 @@
     }
     .service-title{
     display: inline-block;
-    font-size: 18px;
+    font-size: 13px;
     color: white;
-    width: 50%;
+    width: 40%;
     padding-left: 2%;
     }
     .sv{
