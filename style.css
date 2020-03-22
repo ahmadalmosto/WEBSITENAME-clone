@@ -180,7 +180,7 @@
                         padding-right: 6px;
                     }
                     
-                    #search a::after {
+                    #search ::after {
                         content: '';
                         font-family: "FontAwesome";
                         font-size: 16px;
@@ -230,7 +230,7 @@
                             height: 35px;
                             width: 80%;
                         }
-                        #search a::after {
+                        #search ::after {
                             font-size: 15px;
                             padding: 11px 13px 10px;
                         }
@@ -246,9 +246,6 @@
                     
                     @media only screen and (min-device-width: 601px) and (max-device-width: 1024px) {
                         #search {
-                            margin: 20px;
-                        }
-                        .info {
                             margin: 20px;
                         }
                     }
